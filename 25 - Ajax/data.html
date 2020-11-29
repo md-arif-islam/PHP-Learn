@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <title>Ajax</title>
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 data-trigger">
+          <h4>Trigger</h4>
+          <form action="">
+            <input type="button" value="Send Data" id="send" />
+          </form>
+        </div>
+        <div class="col-md-8 data-value">
+          <pre id="result"></pre>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script>
+    document.querySelector("#send").addEventListener("click", function () {
+      let params = {
+        key1: "value 1",
+        key2: "value 2",
+        key3: "value3 & more",
+        bt: "jQuery",
+      };
+
+      $.post("data.php", params, function (response) {
+        $("#result").html(response);
+      });
+      sendDataByJquery();
+    });
+
+  </script>
+</html>

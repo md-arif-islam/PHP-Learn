@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "autoprefixer",
+			"path": "14 - FileSystem/8 - CRUD projects/crud/milligram/",
+			"problemMatcher": [],
+			"label": "npm: autoprefixer - 14 - FileSystem/8 - CRUD projects/crud/milligram",
+			"detail": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
